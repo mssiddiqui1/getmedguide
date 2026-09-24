@@ -1,0 +1,228 @@
+<!--
+  ============================================================================
+  GetMedGuide — guide page TEMPLATE. Do not link to this file from anywhere.
+
+  HOW TO USE THIS FILE
+  ---------------------
+  1. Duplicate this file and rename it to your new guide's slug, e.g.
+     guides/your-next-guide.html
+  2. Fill in every [PLACEHOLDER] below (title, description, content).
+  3. This file shows BOTH ways a guide can work — scroll down to
+     "OPTION A — FREE, FULL GUIDE" and "OPTION B — PAID PREVIEW". Keep
+     whichever one matches your new guide and delete the other's markup.
+  4. Add an entry for it in ../assets/js/materials-data.js pointing its
+     pageUrl at your new file. That's the only other step — every page
+     (Home's featured section, Guides, Free Resources) picks it up
+     automatically.
+
+  Because this lives one folder below the site root, every link to CSS, JS,
+  and other pages uses "../" (e.g. ../assets/css/styles.css, ../index.html).
+
+  Every guide opens in its own tab when a user clicks through from a card
+  elsewhere on the site (that's set on the card's link, not here) — nothing
+  extra to do in this file for that.
+  ============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Apply saved theme before first paint to avoid a flash of the wrong theme -->
+<script>(function(){try{var t=localStorage.getItem('gmg-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<title>[Guide Title] | GetMedGuide</title>
+<meta name="description" content="[One or two sentences describing this guide — shows up in Google search results.]">
+<link rel="canonical" href="https://getmedguide.com/guides/[your-slug].html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Guide Title] | GetMedGuide">
+<meta property="og:description" content="[Same short description as above.]">
+<meta property="og:url" content="https://getmedguide.com/guides/[your-slug].html">
+<meta property="og:site_name" content="GetMedGuide">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230F2540%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 text-anchor=%22middle%22 fill=%22%23ffffff%22 font-family=%22sans-serif%22 font-weight=%22bold%22>GM</text></svg>">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+<!-- Google Analytics (GA4) — already wired to the real GetMedGuide.com property -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9V0Y9LC399"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9V0Y9LC399');
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo" data-menu="Logo/Home">
+      <span class="logo-mark" aria-hidden="true">GM</span>
+      <span class="logo-text">GetMedGuide</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html" data-menu="Home">Home</a>
+      <a href="../guides.html" class="is-current" data-menu="Guides">Guides</a>
+      <a href="../free-resources.html" data-menu="Free Resources">Free Resources</a>
+      <a href="../videos.html" data-menu="Videos">Videos</a>
+      <a href="../about.html" data-menu="About">About</a>
+      <a href="../faq.html" data-menu="FAQ">FAQ</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-menu="Theme Toggle">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ==================== GUIDE HEADER ==================== -->
+  <section class="guide-header">
+    <div class="container">
+      <a class="guide-crumb" href="../guides.html">← All Guides</a>
+      <div class="guide-header-badges">
+        <!-- Free guide: <span class="badge badge-free">Free</span>
+             Paid guide: <span class="badge badge-paid">Paid</span> -->
+        <span class="badge badge-free">Free</span>
+        <span class="badge badge-format">[Category, e.g. CPC Exam]</span>
+      </div>
+      <h1>[Guide Title]</h1>
+      <p class="guide-dek">[One-sentence summary of what the reader will get from this page.]</p>
+    </div>
+  </section>
+
+  <!-- ==================== GUIDE BODY ==================== -->
+  <section class="guide-body">
+    <div class="container guide-layout">
+      <article class="guide-article">
+
+        <!--
+          ======================================================================
+          CONTENT BUILDING BLOCKS — use any of these inside the article:
+
+          <h2>Section Heading</h2>
+          <p>Paragraph text.</p>
+
+          <ul>
+            <li>Bullet point</li>
+          </ul>
+
+          <div class="guide-note">
+            <p><strong>Note:</strong> a callout box for a tip or a rule that's
+            easy to forget.</p>
+          </div>
+
+          <div class="guide-table-wrap">
+            <table class="guide-table">
+              <thead><tr><th>Column</th><th>Column</th></tr></thead>
+              <tbody>
+                <tr><td>Value</td><td>Value</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="guide-qa">
+            <p class="q">Q: A question, for interview-prep / Q&amp;A style guides?</p>
+            <p class="a">A model answer.</p>
+          </div>
+          ======================================================================
+        -->
+
+        <!-- ============================================================
+             OPTION A — FREE, FULL GUIDE
+             Use this pattern when the item's access is "free" in
+             materials-data.js. Write the complete guide here, no cutoff.
+             Delete this comment and Option B below once you've picked one.
+             ============================================================ -->
+        <h2>[First section heading]</h2>
+        <p>[Full content — write as much as the guide needs. This is the
+        entire guide; nothing is held back for free items.]</p>
+
+        <h2>[Next section heading]</h2>
+        <p>[More content…]</p>
+
+        <!-- End the guide with a next-step nudge -->
+        <div class="guide-next">
+          <p>Found this useful? There's more in the full library.</p>
+          <a class="btn btn-primary btn-small" href="../guides.html" data-menu="Guide Footer - Browse All Guides">Browse All Guides →</a>
+        </div>
+
+        <!-- ============================================================
+             OPTION B — PAID, PREVIEW-THEN-BUY GUIDE
+             Use this pattern when the item's access is "paid" in
+             materials-data.js. Write real, genuinely useful content up to
+             a natural stopping point, wrap it in .guide-preview-cutoff so
+             it visually fades out, then show the guide-buy-box with a
+             Payhip "Buy" link. Delete Option A above if you use this one.
+
+        <h2>[First section heading — the real, complete preview content]</h2>
+        <p>[Real content the reader can actually use — this is what earns
+        the sale. Don't make it thin.]</p>
+
+        <div class="guide-preview-cutoff">
+          <h2>[A section that starts strong, then gets cut off by the fade]</h2>
+          <p>[This paragraph is real content — the fade below is purely
+          visual, so don't rely on it to hide anything sensitive; the full
+          HTML is still in the page source. Keep genuinely exclusive
+          content out of the page entirely and only in the file you upload
+          to Payhip.]</p>
+        </div>
+
+        <div class="guide-buy-box">
+          <span class="badge badge-paid">Paid</span>
+          <h3>Get the full guide</h3>
+          <p>[One sentence on what unlocking gets them — page count, what's
+          covered, etc.]</p>
+          <span class="guide-buy-price">$[price]</span>
+          <a class="btn btn-primary" href="https://payhip.com/b/REPLACE-ME" data-menu="Buy: [Guide Title]" target="_blank" rel="noopener">Buy Now</a>
+        </div>
+             ============================================================ -->
+
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" data-menu="Footer - Logo/Home">
+          <span class="logo-mark" aria-hidden="true">GM</span>
+          <span class="logo-text">GetMedGuide</span>
+        </a>
+        <p>Practical study materials for medical coding certification and healthcare credentials — free and paid, growing every month.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../guides.html" data-menu="Footer - Guides">All Guides</a></li>
+          <li><a href="../free-resources.html" data-menu="Footer - Free Resources">Free Resources</a></li>
+          <li><a href="../videos.html" data-menu="Footer - Videos">Videos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about.html" data-menu="Footer - About">About</a></li>
+          <li><a href="../faq.html" data-menu="Footer - FAQ">FAQ</a></li>
+          <li><a href="mailto:hello@getmedguide.com" data-menu="Footer - Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> GetMedGuide.com<span class="footer-disclaimer">Checkout for paid guides is handled externally by Payhip. GetMedGuide.com is not responsible for issues, disputes, or fraud arising from third-party checkout.</span><span class="footer-disclaimer">All sales are final — digital products are not eligible for returns, refunds, or exchanges.</span></div>
+  </div>
+</footer>
+
+<script src="../assets/js/materials-data.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

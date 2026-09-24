@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://getmedguide.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://getmedguide.com/guides.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://getmedguide.com/free-resources.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://getmedguide.com/videos.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://getmedguide.com/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://getmedguide.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://getmedguide.com/guides/medical-coding-career-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/revenue-cycle-explained.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/interview-prep.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/cpc-exam-pocket-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://getmedguide.com/guides/cpc-cheat-sheet.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://getmedguide.com/guides/cpt-sections-tree.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://getmedguide.com/guides/hcpcs-level2-tree.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://getmedguide.com/guides/icd10cm-chapters-tree.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://getmedguide.com/guides/revenue-cycle-pocket-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://getmedguide.com/guides/cpc-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
