@@ -28,6 +28,9 @@
                  PDF as the preview.
    buyUrl      : for PAID items — the checkout link from Payhip. Create the
                  product in Payhip, copy its product link, paste it here.
+   featured    : optional. Set to true to show this item in the Home page's
+                 "Featured Guides" section. If nothing has featured: true,
+                 Home falls back to showing the first 4 items in this list.
    ========================================================================== */
 
 const MATERIALS = [
@@ -38,6 +41,7 @@ const MATERIALS = [
     category: "Getting Started",
     format: "html",
     access: "free",
+    featured: true,
     pageUrl: "guides/medical-coding-career-guide.html"
   },
   {
@@ -47,6 +51,7 @@ const MATERIALS = [
     category: "Revenue Cycle",
     format: "html",
     access: "free",
+    featured: true,
     pageUrl: "guides/revenue-cycle-explained.html"
   },
   {
@@ -56,6 +61,7 @@ const MATERIALS = [
     category: "Career",
     format: "html",
     access: "free",
+    featured: true,
     pageUrl: "guides/interview-prep.html"
   },
   {
@@ -64,10 +70,9 @@ const MATERIALS = [
     description: "A condensed, exam-day reference covering the high-yield rules and reminders that show up again and again on the CPC exam.",
     category: "CPC Exam",
     format: "html",
-    access: "paid",
-    price: "$12",
-    pageUrl: "guides/cpc-exam-pocket-guide.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-cpc-exam-pocket-guide"
+    access: "free",
+    featured: true,
+    pageUrl: "guides/cpc-exam-pocket-guide.html"
   },
   {
     id: "cpc-cheat-sheet",
@@ -88,6 +93,7 @@ const MATERIALS = [
     format: "pdf",
     access: "paid",
     price: "$25",
+    featured: true,
     pageUrl: "guides/cpc-flashcards.html",
     buyUrl: "https://payhip.com/b/4wmnb"
   },
@@ -134,6 +140,105 @@ const MATERIALS = [
     price: "$10",
     pageUrl: "guides/revenue-cycle-pocket-guide.html",
     buyUrl: "https://payhip.com/b/REPLACE-ME-revenue-cycle-pocket-guide"
+  },
+  {
+    id: "intro-hipaa-compliance",
+    title: "Introduction to HIPAA Compliance",
+    description: "What HIPAA actually protects, who it applies to, and what compliance looks like in a real coding or billing job.",
+    category: "Compliance",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-hipaa-compliance.html"
+  },
+  {
+    id: "intro-emr-ehr",
+    title: "Introduction to EMR and EHR",
+    description: "What separates an EMR from an EHR, how patient data moves between systems, and why it matters for coding accuracy.",
+    category: "Health IT",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-emr-ehr.html"
+  },
+  {
+    id: "intro-to-healthcare",
+    title: "Introduction to Healthcare",
+    description: "A big-picture map of the healthcare industry — sectors, players, coverage types, and where coding and billing careers fit in.",
+    category: "Getting Started",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-to-healthcare.html"
+  },
+  {
+    id: "intro-to-nursing",
+    title: "Introduction to Nursing",
+    description: "The nursing credential ladder, the nursing process, and why nursing documentation matters so much to coders and billers.",
+    category: "Healthcare Careers",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-to-nursing.html"
+  },
+  {
+    id: "intro-cca",
+    title: "Introduction to CCA",
+    description: "What AHIMA's entry-level Certified Coding Associate credential covers, and how it compares to CPC.",
+    category: "AHIMA Certifications",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-cca.html"
+  },
+  {
+    id: "intro-cbcs",
+    title: "Introduction to CBCS",
+    description: "What the NHA's Certified Billing and Coding Specialist exam covers, and who the combined billing-and-coding role fits.",
+    category: "NHA Certifications",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-cbcs.html"
+  },
+  {
+    id: "intro-coc",
+    title: "Introduction to COC",
+    description: "What the Certified Outpatient Coder credential covers, and how facility outpatient coding differs from physician coding.",
+    category: "AAPC Certifications",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-coc.html"
+  },
+  {
+    id: "intro-cic",
+    title: "Introduction to CIC",
+    description: "What the Certified Inpatient Coder credential covers — ICD-10-PCS, MS-DRGs, and how inpatient coding differs from outpatient.",
+    category: "AAPC Certifications",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-cic.html"
+  },
+  {
+    id: "intro-ccs",
+    title: "Introduction to CCS",
+    description: "What the advanced, hospital-wide Certified Coding Specialist credential covers, and how it compares to CCA, COC, and CIC.",
+    category: "AHIMA Certifications",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-ccs.html"
+  },
+  {
+    id: "intro-crc",
+    title: "Introduction to CRC",
+    description: "What risk adjustment coding is, how HCCs and RAF scores work, and what the Certified Risk Adjustment Coder credential tests.",
+    category: "AAPC Certifications",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-crc.html"
+  },
+  {
+    id: "intro-cpma",
+    title: "Introduction to CPMA",
+    description: "What medical auditing involves, the audit cycle, and what the Certified Professional Medical Auditor credential tests.",
+    category: "AAPC Certifications",
+    format: "html",
+    access: "free",
+    pageUrl: "guides/intro-cpma.html"
   }
 
   /* --------------------------------------------------------------------

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('gmg-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<title>Introduction to EMR and EHR | GetMedGuide</title>
+<meta name="description" content="A clear introduction to EMR vs. EHR systems in healthcare — core functions, interoperability standards, and what coders and billers need to know.">
+<link rel="canonical" href="https://getmedguide.com/guides/intro-emr-ehr.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Introduction to EMR and EHR | GetMedGuide">
+<meta property="og:description" content="A clear introduction to EMR vs. EHR systems in healthcare — core functions, interoperability standards, and what coders and billers need to know.">
+<meta property="og:url" content="https://getmedguide.com/guides/intro-emr-ehr.html">
+<meta property="og:site_name" content="GetMedGuide">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230F2540%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 text-anchor=%22middle%22 fill=%22%23ffffff%22 font-family=%22sans-serif%22 font-weight=%22bold%22>GM</text></svg>">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9V0Y9LC399"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9V0Y9LC399');
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo" data-menu="Logo/Home">
+      <span class="logo-mark" aria-hidden="true">GM</span>
+      <span class="logo-text">GetMedGuide</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html" data-menu="Home">Home</a>
+      <a href="../guides.html" class="is-current" data-menu="Guides">Guides</a>
+      <a href="../free-resources.html" data-menu="Free Resources">Free Resources</a>
+      <a href="../videos.html" data-menu="Videos">Videos</a>
+      <a href="../about.html" data-menu="About">About</a>
+      <a href="../faq.html" data-menu="FAQ">FAQ</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-menu="Theme Toggle">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="guide-header">
+    <div class="container">
+      <a class="guide-crumb" href="../guides.html">&larr; All Guides</a>
+      <div class="guide-header-badges">
+        <span class="badge badge-free">Free</span>
+        <span class="badge badge-format">Health IT</span>
+      </div>
+      <h1>Introduction to EMR and EHR</h1>
+      <p class="guide-dek">What actually separates an EMR from an EHR, how patient data moves between systems, and why it matters for coding accuracy.</p>
+    </div>
+  </section>
+
+  <section class="guide-body">
+    <div class="container guide-layout">
+      <article class="guide-article">
+
+
+        <h2>EMR vs. EHR: one letter, one real difference</h2>
+        <p>The two terms get used interchangeably, but they describe different scopes of the same idea — a digital patient chart.</p>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Term</th><th>Scope</th><th>Think of it as</th></tr></thead>
+            <tbody>
+              <tr><td><strong>EMR</strong> (Electronic Medical Record)</td><td>One practice or facility</td><td>A digital version of that office's paper chart</td></tr>
+              <tr><td><strong>EHR</strong> (Electronic Health Record)</td><td>Designed to be shared across providers</td><td>A more complete, portable patient record</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>An EMR generally doesn't leave the practice that created it — if you switch doctors, your old EMR data often has to be printed or faxed to the new office. An EHR is built with interoperability in mind, so authorized providers outside the originating practice can pull it up.</p>
+
+        <div class="guide-diagram">
+<svg viewBox="0 0 846 98" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing a patient visit recorded in one provider's EMR, then shared through a health information exchange into a broader EHR visible across providers">
+<defs><marker id="emr1-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--primary)"/></marker></defs>
+<rect x="16" y="16" width="178" height="66" rx="12" fill="var(--navy)"/>
+<text x="105.0" y="37.0" text-anchor="middle" fill="#ffffff" font-size="13.5" font-weight="700" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Visit at</text>
+<text x="105.0" y="54.0" text-anchor="middle" fill="#ffffff" font-size="12.0" font-weight="400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Provider A</text>
+<text x="105.0" y="71.0" text-anchor="middle" fill="#ffffff" font-size="12.0" font-weight="400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">(paper or EMR)</text>
+<rect x="228" y="16" width="178" height="66" rx="12" fill="var(--navy)"/>
+<text x="317.0" y="37.0" text-anchor="middle" fill="#ffffff" font-size="13.5" font-weight="700" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Provider A's</text>
+<text x="317.0" y="54.0" text-anchor="middle" fill="#ffffff" font-size="12.0" font-weight="400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">EMR</text>
+<text x="317.0" y="71.0" text-anchor="middle" fill="#ffffff" font-size="12.0" font-weight="400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">single-practice chart</text>
+<rect x="440" y="16" width="178" height="66" rx="12" fill="var(--navy)"/>
+<text x="529.0" y="37.0" text-anchor="middle" fill="#ffffff" font-size="13.5" font-weight="700" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Health Info</text>
+<text x="529.0" y="54.0" text-anchor="middle" fill="#ffffff" font-size="12.0" font-weight="400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Exchange (HIE)</text>
+<text x="529.0" y="71.0" text-anchor="middle" fill="#ffffff" font-size="12.0" font-weight="400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">shares data</text>
+<rect x="652" y="16" width="178" height="66" rx="12" fill="var(--navy)"/>
+<text x="741.0" y="37.0" text-anchor="middle" fill="#ffffff" font-size="13.5" font-weight="700" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Shared EHR</text>
+<text x="741.0" y="54.0" text-anchor="middle" fill="#ffffff" font-size="12.0" font-weight="400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">view across</text>
+<text x="741.0" y="71.0" text-anchor="middle" fill="#ffffff" font-size="12.0" font-weight="400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">every provider</text>
+<line x1="198" y1="49.0" x2="220" y2="49.0" stroke="var(--primary)" stroke-width="2.5" marker-end="url(#emr1-arrow)"/>
+<line x1="410" y1="49.0" x2="432" y2="49.0" stroke="var(--primary)" stroke-width="2.5" marker-end="url(#emr1-arrow)"/>
+<line x1="622" y1="49.0" x2="644" y2="49.0" stroke="var(--primary)" stroke-width="2.5" marker-end="url(#emr1-arrow)"/>
+</svg>
+<p class="guide-diagram-caption">An EMR is one provider's digital chart; an EHR is that same information made shareable across the patient's whole care team.</p>
+</div>
+
+        <h2>Where this came from: the HITECH Act</h2>
+        <p>The 2009 HITECH Act pushed U.S. healthcare from paper charts to electronic ones, offering incentive payments (originally called "Meaningful Use," later renamed "Promoting Interoperability") to providers who adopted <strong>Certified EHR Technology (CEHRT)</strong> and used it to meet specific standards for data capture, exchange, and patient access.</p>
+
+        <h2>Core things an EHR does</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Function</th><th>What it means</th></tr></thead>
+            <tbody>
+              <tr><td>CPOE</td><td>Computerized Provider Order Entry — orders (labs, meds, imaging) entered directly, not handwritten</td></tr>
+              <tr><td>e-Prescribing</td><td>Prescriptions sent electronically straight to the pharmacy</td></tr>
+              <tr><td>Clinical decision support</td><td>Built-in alerts — drug interactions, allergy warnings, preventive care reminders</td></tr>
+              <tr><td>Patient portal</td><td>Patients view results, message providers, and request records themselves</td></tr>
+              <tr><td>Structured documentation</td><td>Templates, problem lists, and coded fields (vs. free-text notes) that make data reportable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Common EHR platforms you'll hear about</h2>
+        <p>You don't need to be an expert in any specific system to start a coding or billing career, but recognizing the names helps in interviews and job postings: <strong>Epic</strong>, <strong>Oracle Health</strong> (formerly Cerner), <strong>MEDITECH</strong>, <strong>athenahealth</strong>, and <strong>eClinicalWorks</strong> are among the most widely used in U.S. hospitals and clinics.</p>
+
+        <h2>Interoperability: HL7 and FHIR</h2>
+        <p>For an EHR to actually share data with other systems, everyone needs to speak the same technical language. <strong>HL7</strong> (Health Level Seven) is the longstanding messaging standard for exchanging clinical data; <strong>FHIR</strong> (Fast Healthcare Interoperability Resources) is the newer, web-based standard built for modern apps and patient-facing tools, and is now the standard behind most new health data exchange requirements.</p>
+
+        <h2>Why this matters for coders and billers</h2>
+        <ul>
+          <li><strong>Superbills and charge capture</strong> often generate automatically from what's documented in the EHR — if the documentation is incomplete, the charges are wrong before a coder even sees the chart.</li>
+          <li><strong>Computer-Assisted Coding (CAC)</strong> tools suggest codes based on EHR documentation using natural language processing — coders review and correct the suggestions rather than starting from a blank page.</li>
+          <li><strong>Documentation integrity</strong> is a real risk area: copy-forward notes, templated "normal" exams that don't match what actually happened, and auto-populated fields can all create records that don't support the codes billed.</li>
+        </ul>
+        <div class="guide-note">
+          <p><strong>Note:</strong> "cloning" (copying a previous note forward without updating it to reflect today's visit) is one of the most commonly cited documentation risks in payer audits — it's worth knowing the term even before your first coding job.</p>
+        </div>
+
+        <h2>The bottom line</h2>
+        <p>You'll spend your career reading EHR-generated documentation, not paper charts, so understanding what the system captures well (and where it can quietly go wrong) is just as important as knowing the code sets themselves.</p>
+
+
+        <div class="guide-next">
+          <p>Curious where coding and billing careers fit into the bigger healthcare picture?</p>
+          <a class="btn btn-primary btn-small" href="intro-to-healthcare.html" data-menu="Guide Footer - Introduction to Healthcare">Read: Introduction to Healthcare &rarr;</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" data-menu="Footer - Logo/Home">
+          <span class="logo-mark" aria-hidden="true">GM</span>
+          <span class="logo-text">GetMedGuide</span>
+        </a>
+        <p>Practical study materials for medical coding certification and healthcare credentials &mdash; free and paid, growing every month.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../guides.html" data-menu="Footer - Guides">All Guides</a></li>
+          <li><a href="../free-resources.html" data-menu="Footer - Free Resources">Free Resources</a></li>
+          <li><a href="../videos.html" data-menu="Footer - Videos">Videos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about.html" data-menu="Footer - About">About</a></li>
+          <li><a href="../faq.html" data-menu="Footer - FAQ">FAQ</a></li>
+          <li><a href="mailto:hello@getmedguide.com" data-menu="Footer - Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> GetMedGuide.com<span class="footer-disclaimer">Checkout for paid guides is handled externally by Payhip. GetMedGuide.com is not responsible for issues, disputes, or fraud arising from third-party checkout.</span><span class="footer-disclaimer">All sales are final &mdash; digital products are not eligible for returns, refunds, or exchanges.</span></div>
+  </div>
+</footer>
+
+<script src="../assets/js/materials-data.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

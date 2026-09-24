@@ -128,9 +128,13 @@
     });
   }
 
-  /* ---------------- index.html — featured sample (first 4) ---------------- */
+  /* ---------------- index.html — featured sample ----------------
+     Shows items with featured: true in materials-data.js. Falls back to
+     the first 4 materials if nothing is explicitly flagged. */
   if (featuredGrid) {
-    renderInto(featuredGrid, MATERIALS.slice(0, 4), "Guides are on the way — check back soon.");
+    var featuredItems = MATERIALS.filter(function (m) { return m.featured; });
+    if (featuredItems.length === 0) featuredItems = MATERIALS.slice(0, 4);
+    renderInto(featuredGrid, featuredItems, "Guides are on the way — check back soon.");
   }
 
   /* ---------------- free-resources.html — free items only ---------------- */
