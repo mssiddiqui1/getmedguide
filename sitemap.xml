@@ -4,6 +4,7 @@
   <url><loc>https://getmedguide.com/guides.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://getmedguide.com/free-resources.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://getmedguide.com/videos.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://getmedguide.com/free-images.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://getmedguide.com/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://getmedguide.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://getmedguide.com/guides/medical-coding-career-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -19,12 +20,21 @@
   <url><loc>https://getmedguide.com/guides/intro-hipaa-compliance.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-emr-ehr.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-to-healthcare.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/intro-to-healthcare-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-to-nursing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/healthcare-exams-overview.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-cca.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/cca-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-cbcs.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/cbcs-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-coc.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/coc-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-cic.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/cic-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-ccs.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/ccs-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-crc.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/crc-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://getmedguide.com/guides/intro-cpma.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getmedguide.com/guides/cpma-flashcards.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

@@ -43,7 +43,8 @@
       <a href="../index.html" data-menu="Home">Home</a>
       <a href="../guides.html" class="is-current" data-menu="Guides">Guides</a>
       <a href="../free-resources.html" data-menu="Free Resources">Free Resources</a>
-      <a href="../videos.html" data-menu="Videos">Videos</a>
+      <!-- <a href="../videos.html" data-menu="Videos">Videos</a> -->
+      <a href="../free-images.html" data-menu="Free Images">Free Images</a>
       <a href="../about.html" data-menu="About">About</a>
       <a href="../faq.html" data-menu="FAQ">FAQ</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-menu="Theme Toggle">
@@ -59,7 +60,7 @@
     <div class="container">
       <a class="guide-crumb" href="../guides.html">← All Guides</a>
       <div class="guide-header-badges">
-        <span class="badge badge-paid">Paid</span>
+        <span class="badge badge-free">Free</span>
         <span class="badge badge-format">CPC Exam</span>
       </div>
       <h1>CPC Cheat Sheet</h1>
@@ -91,23 +92,128 @@
           </table>
         </div>
 
-        <div class="guide-preview-cutoff">
-          <h2>ICD-10-CM guideline reminders</h2>
-          <p>Always start in the Alphabetic Index, then verify in the Tabular List — never code from the Index alone. The 7th character A/D/S marks initial, subsequent, or sequela encounters...</p>
-          <p>The full cheat sheet also covers every must-know modifier (25, 59, 26/TC, 50, 51, 76/77, 24, 57, RT/LT), high-yield medical terminology roots and suffixes, HCPCS Level II letter categories, the current E/M leveling rules, compliance and claim-form basics (CMS-1500, UB-04, HIPAA, NCCI edits), and exam-day strategy — all on two printable pages.</p>
+        <h2>CPT sections &amp; ranges</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Section</th><th>Range</th></tr></thead>
+            <tbody>
+              <tr><td>E/M</td><td>99202–99499</td></tr>
+              <tr><td>Anesthesia</td><td>00100–01999</td></tr>
+              <tr><td>Surgery</td><td>10021–69990</td></tr>
+              <tr><td>Radiology</td><td>70010–79999</td></tr>
+              <tr><td>Path &amp; Lab</td><td>80047–89398</td></tr>
+              <tr><td>Medicine</td><td>90281–99607</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="guide-note">
+          <p><strong>Symbols:</strong> ● new · ▲ revised · + add-on (never reported alone) · ⊘ modifier-51 exempt.</p>
         </div>
 
-        <div class="guide-buy-box">
-          <span class="badge badge-paid">Paid</span>
-          <h3>Get the full cheat sheet</h3>
-          <p>Everything above, plus modifiers, terminology, HCPCS letters, E/M rules, and exam-day strategy — condensed to two pages.</p>
-          <span class="guide-buy-price">$8</span>
-          <a class="btn btn-primary" href="https://payhip.com/b/REPLACE-ME-cpc-cheat-sheet" data-menu="Buy: CPC Cheat Sheet" target="_blank" rel="noopener">Buy Now</a>
+        <h2>Must-know modifiers</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Modifier</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>25</td><td>Significant, separately identifiable E/M the same day as a procedure</td></tr>
+              <tr><td>59</td><td>Distinct procedural service (unbundling, when appropriate)</td></tr>
+              <tr><td>26 / TC</td><td>Professional / Technical component</td></tr>
+              <tr><td>50</td><td>Bilateral procedure</td></tr>
+              <tr><td>51</td><td>Multiple procedures, same session</td></tr>
+              <tr><td>76 / 77</td><td>Repeat procedure by the same / a different provider</td></tr>
+              <tr><td>24</td><td>Unrelated E/M during a postoperative period</td></tr>
+              <tr><td>57</td><td>E/M that led to the decision for surgery</td></tr>
+              <tr><td>RT / LT</td><td>Right / Left side</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>ICD-10-CM guideline reminders</h2>
+        <ul>
+          <li>Always start in the Alphabetic Index, then verify the full code in the Tabular List — never code from the Index alone.</li>
+          <li>7th character: A = initial encounter · D = subsequent encounter · S = sequela.</li>
+          <li>"Code first" means sequencing the underlying/etiology code before this one.</li>
+          <li>Combination codes capture two conditions in a single code (for example, diabetes with a manifestation).</li>
+          <li>Use laterality (right/left) and the most specific code the documentation supports.</li>
+          <li>Use "unspecified" only when the documentation genuinely won't support more detail.</li>
+        </ul>
+
+        <h2>HCPCS Level II letters</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Letter</th><th>Covers</th></tr></thead>
+            <tbody>
+              <tr><td>A</td><td>Transport, supplies, miscellaneous</td></tr>
+              <tr><td>E</td><td>Durable medical equipment (DME)</td></tr>
+              <tr><td>G</td><td>Procedures / professional services (temporary)</td></tr>
+              <tr><td>J</td><td>Drugs (injectables), chemotherapy</td></tr>
+              <tr><td>L</td><td>Orthotics &amp; prosthetics</td></tr>
+              <tr><td>P</td><td>Pathology &amp; laboratory</td></tr>
+              <tr><td>V</td><td>Vision &amp; hearing</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>E/M quick guide (2021+ rules)</h2>
+        <ul>
+          <li>Office visits are leveled by Medical Decision-Making (MDM) or total time — whichever is higher.</li>
+          <li>MDM = problems addressed + data reviewed + risk.</li>
+          <li>New patient: 99202–99205 · Established patient: 99211–99215.</li>
+          <li>History and exam no longer drive the level — they just need to be medically appropriate.</li>
+        </ul>
+
+        <h2>Medical terminology — high yield</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Term part</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>-ectomy</td><td>Surgical removal</td></tr>
+              <tr><td>-otomy</td><td>Incision into</td></tr>
+              <tr><td>-ostomy</td><td>Creation of a new opening</td></tr>
+              <tr><td>-itis</td><td>Inflammation</td></tr>
+              <tr><td>-plasty</td><td>Surgical repair</td></tr>
+              <tr><td>-scopy</td><td>Visual examination</td></tr>
+              <tr><td>hepat/o</td><td>Liver</td></tr>
+              <tr><td>nephr/o · ren/o</td><td>Kidney</td></tr>
+              <tr><td>cardi/o</td><td>Heart</td></tr>
+              <tr><td>arthr/o</td><td>Joint</td></tr>
+              <tr><td>dys- / tachy-</td><td>Difficult / fast</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Compliance &amp; forms</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Term</th><th>What it means</th></tr></thead>
+            <tbody>
+              <tr><td>CMS-1500</td><td>Professional / physician (outpatient) claims</td></tr>
+              <tr><td>UB-04</td><td>Institutional / hospital facility claims</td></tr>
+              <tr><td>HIPAA</td><td>Protects patient PHI (minimum necessary standard)</td></tr>
+              <tr><td>NCCI edits</td><td>Prevent improper unbundling / invalid code pairs</td></tr>
+              <tr><td>Upcoding</td><td>Billing a higher level than documented — fraud</td></tr>
+              <tr><td>Medical necessity</td><td>The diagnosis (ICD-10-CM) must justify the procedure (CPT)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Open-book &amp; exam-day strategy</h2>
+        <ul>
+          <li>Tab your manuals by section — highlighting is fine, long handwritten notes are not.</li>
+          <li>Use a 3-pass method: easy questions first, flagged lookups next, case studies last.</li>
+          <li>Never spend more than about 4 minutes on one question — flag it and move on.</li>
+          <li>Eliminate two wrong answers, then verify the remaining code in the book.</li>
+          <li>Read E/M and operative-note case studies twice — the detail usually decides the code.</li>
+          <li>Leave no blanks — there's no penalty for guessing.</li>
+        </ul>
+
+        <div class="guide-note">
+          <p><strong>Note:</strong> this is a study aid, not a substitute for the official AAPC materials or your current-year code manuals. Code sets, ranges, and exam rules update annually — always confirm against your current CPT, ICD-10-CM, and HCPCS books and aapc.com.</p>
         </div>
 
         <div class="guide-next">
           <p>Want more detail per topic, in one longer reference?</p>
-          <a class="btn btn-outline btn-small" href="cpc-exam-pocket-guide.html" target="_blank" rel="noopener" data-menu="Guide Footer - Pocket Guide">See the CPC Exam Pocket Guide →</a>
+          <a class="btn btn-outline btn-small" href="cpc-exam-pocket-guide.html" data-menu="Guide Footer - Pocket Guide">See the CPC Exam Pocket Guide →</a>
         </div>
 
       </article>
@@ -130,7 +236,8 @@
         <ul>
           <li><a href="../guides.html" data-menu="Footer - Guides">All Guides</a></li>
           <li><a href="../free-resources.html" data-menu="Footer - Free Resources">Free Resources</a></li>
-          <li><a href="../videos.html" data-menu="Footer - Videos">Videos</a></li>
+          <!-- <li><a href="../videos.html" data-menu="Footer - Videos">Videos</a></li> -->
+          <li><a href="../free-images.html" data-menu="Footer - Free Images">Free Images</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -138,7 +245,7 @@
         <ul>
           <li><a href="../about.html" data-menu="Footer - About">About</a></li>
           <li><a href="../faq.html" data-menu="Footer - FAQ">FAQ</a></li>
-          <li><a href="mailto:hello@getmedguide.com" data-menu="Footer - Contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/getmedguide" data-menu="Footer - Contact" target="_blank" rel="noopener">Contact</a></li>
         </ul>
       </div>
     </div>

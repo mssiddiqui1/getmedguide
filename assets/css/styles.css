@@ -504,6 +504,123 @@ section { padding: 60px 0; }
 .guide-qa .q { font-weight: 700; color: var(--text); margin: 0 0 6px; }
 .guide-qa .a { margin: 0; color: var(--text-muted); }
 
+/* Flashcard-style samples: a stacked "front" (question) / "back" (answer)
+   pair styled to look like an actual physical flashcard, not a plain Q&A
+   block. Used on flashcard-product preview pages — keep sample counts to
+   4 cards max (a 2x2 grid) so the preview stays a teaser, not the product. */
+.flashcard-sample-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 0 0 1.6em;
+}
+@media (max-width: 640px) {
+  .flashcard-sample-grid { grid-template-columns: 1fr; }
+}
+.flashcard {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px dashed var(--border);
+  background: var(--card-bg);
+  box-shadow: 0 6px 18px -10px var(--shadow);
+}
+.flashcard-face {
+  position: relative;
+  padding: 34px 18px 16px;
+  background: var(--card-bg);
+  min-height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flashcard-face.back {
+  border-top: 1px dashed var(--border);
+}
+.flashcard-term {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+.flashcard-tag {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-size: .62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #ffffff;
+  background: var(--gold-soft);
+  padding: 3px 9px;
+  border-radius: 10px;
+  line-height: 1.4;
+}
+.flashcard-num {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: .68rem;
+  color: var(--text-muted);
+}
+.flashcard-label {
+  margin: 0 0 6px;
+  font-size: .66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--primary);
+}
+.flashcard-answer { margin: 0; color: var(--primary-dark); font-weight: 700; font-size: 1rem; line-height: 1.4; }
+
+/* Category subheadings above a full flashcard-sample-grid, used on free
+   full-deck pages (e.g. intro-to-healthcare-flashcards.html) that show
+   every card grouped by topic instead of just 4 samples. */
+.flashcard-section-title {
+  margin: 2em 0 0.7em;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  padding-top: 0.6em;
+  border-top: 1px solid var(--border);
+}
+.flashcard-section-title:first-of-type {
+  margin-top: 1.2em;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* Free LinkedIn banner downloads (free-images.html) */
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+@media (max-width: 780px) {
+  .banner-grid { grid-template-columns: 1fr; }
+}
+.banner-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: 0 6px 18px -10px var(--shadow);
+}
+.banner-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1584 / 396;
+  object-fit: cover;
+  background: var(--navy);
+}
+.banner-item-body { padding: 14px 16px 16px; }
+.banner-item-body h3 { margin: 0 0 2px; font-size: 1.05rem; }
+.banner-item-body p { margin: 0 0 12px; font-size: .85rem; color: var(--text-muted); }
+.banner-item-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
 /* Paid preview: real content fades into a gradient, then a Buy CTA box */
 .guide-preview-cutoff {
   position: relative;

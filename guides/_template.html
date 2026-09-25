@@ -18,9 +18,11 @@
   Because this lives one folder below the site root, every link to CSS, JS,
   and other pages uses "../" (e.g. ../assets/css/styles.css, ../index.html).
 
-  Every guide opens in its own tab when a user clicks through from a card
-  elsewhere on the site (that's set on the card's link, not here) — nothing
-  extra to do in this file for that.
+  Links open in the SAME window/tab by default — that's the site-wide rule
+  now. Only a link that leaves getmedguide.com (a Payhip Buy button, a social
+  link) should carry target="_blank" rel="noopener". Cards elsewhere on the
+  site already follow this (see main.js); don't add target="_blank" to
+  on-site links inside this file either.
   ============================================================================
 -->
 <!DOCTYPE html>
@@ -70,7 +72,8 @@
       <a href="../index.html" data-menu="Home">Home</a>
       <a href="../guides.html" class="is-current" data-menu="Guides">Guides</a>
       <a href="../free-resources.html" data-menu="Free Resources">Free Resources</a>
-      <a href="../videos.html" data-menu="Videos">Videos</a>
+      <!-- <a href="../videos.html" data-menu="Videos">Videos</a> -->
+      <a href="../free-images.html" data-menu="Free Images">Free Images</a>
       <a href="../about.html" data-menu="About">About</a>
       <a href="../faq.html" data-menu="FAQ">FAQ</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-menu="Theme Toggle">
@@ -206,7 +209,8 @@
         <ul>
           <li><a href="../guides.html" data-menu="Footer - Guides">All Guides</a></li>
           <li><a href="../free-resources.html" data-menu="Footer - Free Resources">Free Resources</a></li>
-          <li><a href="../videos.html" data-menu="Footer - Videos">Videos</a></li>
+          <!-- <li><a href="../videos.html" data-menu="Footer - Videos">Videos</a></li> -->
+          <li><a href="../free-images.html" data-menu="Footer - Free Images">Free Images</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -214,7 +218,7 @@
         <ul>
           <li><a href="../about.html" data-menu="Footer - About">About</a></li>
           <li><a href="../faq.html" data-menu="Footer - FAQ">FAQ</a></li>
-          <li><a href="mailto:hello@getmedguide.com" data-menu="Footer - Contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/getmedguide" data-menu="Footer - Contact" target="_blank" rel="noopener">Contact</a></li>
         </ul>
       </div>
     </div>

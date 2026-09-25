@@ -43,7 +43,8 @@
       <a href="../index.html" data-menu="Home">Home</a>
       <a href="../guides.html" class="is-current" data-menu="Guides">Guides</a>
       <a href="../free-resources.html" data-menu="Free Resources">Free Resources</a>
-      <a href="../videos.html" data-menu="Videos">Videos</a>
+      <!-- <a href="../videos.html" data-menu="Videos">Videos</a> -->
+      <a href="../free-images.html" data-menu="Free Images">Free Images</a>
       <a href="../about.html" data-menu="About">About</a>
       <a href="../faq.html" data-menu="FAQ">FAQ</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-menu="Theme Toggle">
@@ -59,7 +60,7 @@
     <div class="container">
       <a class="guide-crumb" href="../guides.html">← All Guides</a>
       <div class="guide-header-badges">
-        <span class="badge badge-paid">Paid</span>
+        <span class="badge badge-free">Free</span>
         <span class="badge badge-format">Revenue Cycle</span>
       </div>
       <h1>Revenue Cycle Pocket Guide</h1>
@@ -74,6 +75,18 @@
         <h2>What is the revenue cycle?</h2>
         <p>The full financial lifecycle of a patient account — from scheduling to final payment. The goal: get providers accurately and fully paid for care, quickly and compliantly. It splits into three phases: front-end (before the visit), mid-cycle (coding &amp; charges), and back-end (claims &amp; collections).</p>
 
+        <h2>Front, mid, and back office</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Phase</th><th>Covers</th></tr></thead>
+            <tbody>
+              <tr><td>Front-end</td><td>Scheduling, registration, eligibility, prior authorization, patient estimates</td></tr>
+              <tr><td>Mid-cycle</td><td>Charge capture, coding, clinical documentation improvement (CDI), charge reconciliation</td></tr>
+              <tr><td>Back-end</td><td>Claims, payment posting, denials &amp; appeals, A/R follow-up, collections</td></tr>
+            </tbody>
+          </table>
+        </div>
+
         <h2>The 13-step RCM lifecycle</h2>
         <div class="guide-table-wrap">
           <table class="guide-table">
@@ -83,38 +96,195 @@
               <tr><td>2</td><td>Registration / patient intake</td></tr>
               <tr><td>3</td><td>Insurance eligibility &amp; verification</td></tr>
               <tr><td>4</td><td>Prior authorization / referral</td></tr>
+              <tr><td>5</td><td>Encounter &amp; documentation</td></tr>
+              <tr><td>6</td><td>Charge capture</td></tr>
+              <tr><td>7</td><td>Medical coding (ICD-10-CM, CPT, HCPCS)</td></tr>
+              <tr><td>8</td><td>Claim scrubbing &amp; submission</td></tr>
+              <tr><td>9</td><td>Payer adjudication</td></tr>
+              <tr><td>10</td><td>Payment / remittance posting</td></tr>
+              <tr><td>11</td><td>Denial management &amp; appeals</td></tr>
+              <tr><td>12</td><td>Patient statements &amp; collections</td></tr>
+              <tr><td>13</td><td>Reporting &amp; analytics</td></tr>
             </tbody>
           </table>
         </div>
+        <p>Charge capture means recording every billable service and supply from the encounter. Coding means translating that documentation into ICD-10-CM (diagnoses) and CPT/HCPCS (services). Charge reconciliation confirms all services were actually captured and charged — accuracy here drives clean claims and fewer denials downstream.</p>
 
-        <h2>Claim forms</h2>
+        <h2>Eligibility &amp; authorization</h2>
         <div class="guide-table-wrap">
           <table class="guide-table">
-            <thead><tr><th>Form</th><th>Used for</th></tr></thead>
+            <thead><tr><th>Term</th><th>What it means</th></tr></thead>
+            <tbody>
+              <tr><td>Eligibility</td><td>Is the patient's coverage active, and what does it actually cover?</td></tr>
+              <tr><td>Verification</td><td>Confirming benefits, copay, deductible, and network status</td></tr>
+              <tr><td>Prior authorization</td><td>Payer approval required before a service is rendered</td></tr>
+              <tr><td>Referral</td><td>A PCP directing a patient to a specialist</td></tr>
+              <tr><td>ABN</td><td>Advance Beneficiary Notice — warns a Medicare patient they may owe if a service is denied</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="guide-note">
+          <p><strong>Note:</strong> most denials start here — verifying eligibility and authorization up front prevents the majority of them.</p>
+        </div>
+
+        <h2>Claim forms &amp; key EDI transactions</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Form / Transaction</th><th>Used for</th></tr></thead>
             <tbody>
               <tr><td>CMS-1500</td><td>Professional / physician (outpatient) claims</td></tr>
               <tr><td>UB-04 (CMS-1450)</td><td>Institutional / hospital facility claims</td></tr>
+              <tr><td>Clearinghouse</td><td>Scrubs and routes claims to payers electronically</td></tr>
+              <tr><td>837</td><td>Claim submission</td></tr>
+              <tr><td>835</td><td>Remittance advice (ERA)</td></tr>
+              <tr><td>270 / 271</td><td>Eligibility inquiry / response</td></tr>
+              <tr><td>276 / 277</td><td>Claim status inquiry / response</td></tr>
+              <tr><td>278</td><td>Prior authorization / referral</td></tr>
             </tbody>
           </table>
         </div>
 
-        <div class="guide-preview-cutoff">
-          <h2>Key RCM metrics (KPIs)</h2>
-          <p>Days in A/R, clean claim rate, first-pass rate, denial rate, net collection rate, and cost to collect are the numbers every RCM team tracks weekly...</p>
-          <p>The full pocket guide continues with the remaining lifecycle steps, key EDI transactions (837, 835, 270/271, 276/277, 278), every payer type, patient financial-responsibility terms (copay, deductible, coinsurance, OOP max), A/R aging buckets, the difference between rejections and denials, common denial reasons, appeals and timely-filing rules, a money-terms glossary, compliance basics, RCM best practices, and a handy acronym list — three printable pages in total.</p>
+        <h2>Payers &amp; insurance</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Payer</th><th>Covers</th></tr></thead>
+            <tbody>
+              <tr><td>Medicare A / B</td><td>Inpatient / Outpatient &amp; physician services</td></tr>
+              <tr><td>Medicare C / D</td><td>Advantage (managed care) / Prescription drugs</td></tr>
+              <tr><td>Medicaid</td><td>Lower-income individuals — jointly run by state and federal government</td></tr>
+              <tr><td>Commercial</td><td>Private insurers (BCBS, UHC, Aetna, Cigna, and others)</td></tr>
+              <tr><td>Other</td><td>TRICARE, Workers' Compensation, self-pay</td></tr>
+              <tr><td>COB</td><td>Coordination of benefits — the primary plan pays first, then the secondary</td></tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="guide-buy-box">
-          <span class="badge badge-paid">Paid</span>
-          <h3>Get the full pocket guide</h3>
-          <p>Every stage of the revenue cycle, KPIs, claim forms, denial reasons, and the terms you're expected to know — three print-ready pages.</p>
-          <span class="guide-buy-price">$10</span>
-          <a class="btn btn-primary" href="https://payhip.com/b/REPLACE-ME-revenue-cycle-pocket-guide" data-menu="Buy: Revenue Cycle Pocket Guide" target="_blank" rel="noopener">Buy Now</a>
+        <h2>Patient financial responsibility</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Term</th><th>What it means</th></tr></thead>
+            <tbody>
+              <tr><td>Copay</td><td>A fixed amount owed per visit or service</td></tr>
+              <tr><td>Deductible</td><td>The amount a patient pays before the plan starts paying</td></tr>
+              <tr><td>Coinsurance</td><td>The patient's percentage share after the deductible is met</td></tr>
+              <tr><td>OOP maximum</td><td>The yearly cap on a patient's out-of-pocket cost</td></tr>
+              <tr><td>Premium</td><td>The monthly cost to keep coverage active</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Rejections vs. denials</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Term</th><th>What it means</th></tr></thead>
+            <tbody>
+              <tr><td>Rejection</td><td>The claim never entered the payer's system (a front-end/format error) — fix it and resubmit</td></tr>
+              <tr><td>Denial</td><td>The claim was processed but not paid — research it, then correct or appeal</td></tr>
+              <tr><td>CARC / RARC</td><td>Codes on the remittance advice that explain why a claim was adjusted or denied</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Common denial reasons</h2>
+        <ul>
+          <li>Eligibility or coverage inactive at the time of service</li>
+          <li>Missing or invalid prior authorization</li>
+          <li>Lack of medical necessity — the diagnosis doesn't support the service billed</li>
+          <li>Coding errors, bundling issues, or NCCI edit conflicts</li>
+          <li>Missing or incorrect information on the claim</li>
+          <li>Duplicate claim submission</li>
+          <li>Timely filing deadline missed</li>
+        </ul>
+
+        <h2>Appeals &amp; timely filing</h2>
+        <ul>
+          <li><strong>Timely filing</strong> is the window to submit a claim — it varies by payer (Medicare, for example, allows one year from the date of service).</li>
+          <li>An <strong>appeal</strong> formally challenges a denial with corrected information or supporting documentation.</li>
+          <li>Appeal levels typically escalate: redetermination → reconsideration → a higher-level review.</li>
+          <li>Track deadlines closely — a missed filing window usually means the claim is lost for good.</li>
+        </ul>
+
+        <h2>Key RCM metrics (KPIs)</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Metric</th><th>What it measures</th></tr></thead>
+            <tbody>
+              <tr><td>Days in A/R</td><td>Average days to collect (target: roughly 40–50 or fewer)</td></tr>
+              <tr><td>Clean claim rate</td><td>% of claims accepted the first time (target: 95%+)</td></tr>
+              <tr><td>First-pass rate</td><td>% of claims paid on the first submission</td></tr>
+              <tr><td>Denial rate</td><td>% of claims denied (target: under roughly 5–10%)</td></tr>
+              <tr><td>Net collection rate</td><td>Amount collected vs. amount collectible, after adjustments</td></tr>
+              <tr><td>Cost to collect</td><td>Expense incurred per dollar collected</td></tr>
+              <tr><td>A/R &gt; 90 days</td><td>Aged receivables — lower is better</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A/R aging is typically tracked in buckets: 0–30 → 31–60 → 61–90 → 90+ days. The older a balance gets, the harder it is to collect.</p>
+
+        <h2>Money terms glossary</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Term</th><th>What it means</th></tr></thead>
+            <tbody>
+              <tr><td>Allowed amount</td><td>The maximum the payer will pay for a service</td></tr>
+              <tr><td>Contractual adjustment</td><td>The write-off of the difference between the billed and contracted rate</td></tr>
+              <tr><td>Write-off</td><td>An amount removed as uncollectible or adjusted</td></tr>
+              <tr><td>EOB / ERA</td><td>Explanation of Benefits / Electronic Remittance Advice</td></tr>
+              <tr><td>EFT</td><td>Electronic Funds Transfer (payment)</td></tr>
+              <tr><td>Fee-for-service</td><td>Payment made per service rendered</td></tr>
+              <tr><td>Capitation</td><td>A fixed payment per patient, per period, regardless of services rendered</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Compliance &amp; integrity</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Term</th><th>What it means</th></tr></thead>
+            <tbody>
+              <tr><td>HIPAA</td><td>Protects patient PHI (minimum necessary standard)</td></tr>
+              <tr><td>Medical necessity</td><td>The diagnosis must justify the service billed</td></tr>
+              <tr><td>NCCI edits</td><td>Prevent improper unbundling of code pairs</td></tr>
+              <tr><td>Upcoding</td><td>Billing higher than what's documented — fraud</td></tr>
+              <tr><td>Fraud vs. abuse</td><td>Intentional deception vs. improper billing that isn't intentional</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>RCM best practices</h2>
+        <ul>
+          <li>Verify eligibility and authorization up front — this stops most denials before they start.</li>
+          <li>Collect copays and estimates at the point of service.</li>
+          <li>Code accurately and scrub claims before submission.</li>
+          <li>Work denials fast, before the timely-filing window runs out.</li>
+          <li>Monitor KPIs and A/R aging weekly.</li>
+          <li>Keep documentation clear and complete — it supports every step downstream.</li>
+          <li>Work the oldest and highest-dollar accounts first. DNFB (Discharged, Not Final Billed) is a key backlog metric to watch.</li>
+        </ul>
+
+        <h2>Handy acronyms</h2>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead><tr><th>Acronym</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>A/R</td><td>Accounts Receivable</td></tr>
+              <tr><td>DOS</td><td>Date of Service</td></tr>
+              <tr><td>POS</td><td>Place of Service</td></tr>
+              <tr><td>NPI</td><td>National Provider Identifier</td></tr>
+              <tr><td>TIN / EIN</td><td>Tax ID / Employer ID Number</td></tr>
+              <tr><td>CDI</td><td>Clinical Documentation Improvement</td></tr>
+              <tr><td>EHR / PM</td><td>Electronic Health Record / Practice Management (system)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="guide-note">
+          <p><strong>Note:</strong> this is a quick-reference study aid. Payer rules, thresholds, and KPI targets vary by organization and change over time — always confirm against your employer's policies, payer contracts, and current CMS/AAPC guidance.</p>
         </div>
 
         <div class="guide-next">
           <p>New to the revenue cycle? Start with the free overview.</p>
-          <a class="btn btn-outline btn-small" href="revenue-cycle-explained.html" target="_blank" rel="noopener" data-menu="Guide Footer - Revenue Cycle Explained">Read The Revenue Cycle, Explained →</a>
+          <a class="btn btn-outline btn-small" href="revenue-cycle-explained.html" data-menu="Guide Footer - Revenue Cycle Explained">Read The Revenue Cycle, Explained →</a>
         </div>
 
       </article>
@@ -137,7 +307,8 @@
         <ul>
           <li><a href="../guides.html" data-menu="Footer - Guides">All Guides</a></li>
           <li><a href="../free-resources.html" data-menu="Footer - Free Resources">Free Resources</a></li>
-          <li><a href="../videos.html" data-menu="Footer - Videos">Videos</a></li>
+          <!-- <li><a href="../videos.html" data-menu="Footer - Videos">Videos</a></li> -->
+          <li><a href="../free-images.html" data-menu="Footer - Free Images">Free Images</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -145,7 +316,7 @@
         <ul>
           <li><a href="../about.html" data-menu="Footer - About">About</a></li>
           <li><a href="../faq.html" data-menu="Footer - FAQ">FAQ</a></li>
-          <li><a href="mailto:hello@getmedguide.com" data-menu="Footer - Contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/getmedguide" data-menu="Footer - Contact" target="_blank" rel="noopener">Contact</a></li>
         </ul>
       </div>
     </div>

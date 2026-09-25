@@ -35,6 +35,16 @@
 
 const MATERIALS = [
   {
+    id: "intro-to-healthcare-flashcards",
+    title: "Introduction to Healthcare Flashcards (100 Cards)",
+    description: "100 free flashcards covering healthcare industry fundamentals — body systems, terminology, insurance basics, HIPAA, EHR, and more.",
+    category: "Getting Started",
+    format: "pdf",
+    access: "free",
+    featured: true,
+    pageUrl: "guides/intro-to-healthcare-flashcards.html"
+  },
+  {
     id: "medical-coding-career-guide",
     title: "Medical Coding Career Guide",
     description: "A complete walkthrough of how to break into medical billing and coding — training paths, certifications, and what the job actually looks like.",
@@ -80,10 +90,8 @@ const MATERIALS = [
     description: "A one-glance reference for the code ranges, modifiers, and rules most likely to trip you up on exam day.",
     category: "CPC Exam",
     format: "html",
-    access: "paid",
-    price: "$8",
-    pageUrl: "guides/cpc-cheat-sheet.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-cpc-cheat-sheet"
+    access: "free",
+    pageUrl: "guides/cpc-cheat-sheet.html"
   },
   {
     id: "cpc-flashcards",
@@ -103,10 +111,8 @@ const MATERIALS = [
     description: "A visual map of every CPT section and subsection, built for fast lookups while you practice.",
     category: "CPT",
     format: "html",
-    access: "paid",
-    price: "$6",
-    pageUrl: "guides/cpt-sections-tree.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-cpt-sections-tree"
+    access: "free",
+    pageUrl: "guides/cpt-sections-tree.html"
   },
   {
     id: "hcpcs-level2-tree",
@@ -114,10 +120,8 @@ const MATERIALS = [
     description: "A visual map of the HCPCS Level II code ranges — supplies, drugs, DME, and services outside CPT.",
     category: "HCPCS",
     format: "html",
-    access: "paid",
-    price: "$6",
-    pageUrl: "guides/hcpcs-level2-tree.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-hcpcs-level2-tree"
+    access: "free",
+    pageUrl: "guides/hcpcs-level2-tree.html"
   },
   {
     id: "icd10cm-chapters-tree",
@@ -125,10 +129,8 @@ const MATERIALS = [
     description: "A visual map of every ICD-10-CM chapter and code range, for fast diagnosis-code lookups.",
     category: "ICD-10",
     format: "html",
-    access: "paid",
-    price: "$6",
-    pageUrl: "guides/icd10cm-chapters-tree.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-icd10cm-chapters-tree"
+    access: "free",
+    pageUrl: "guides/icd10cm-chapters-tree.html"
   },
   {
     id: "revenue-cycle-pocket-guide",
@@ -136,10 +138,8 @@ const MATERIALS = [
     description: "A condensed reference for every stage of the revenue cycle — registration through collections — with the terms you're expected to know.",
     category: "Revenue Cycle",
     format: "html",
-    access: "paid",
-    price: "$10",
-    pageUrl: "guides/revenue-cycle-pocket-guide.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-revenue-cycle-pocket-guide"
+    access: "free",
+    pageUrl: "guides/revenue-cycle-pocket-guide.html"
   },
   {
     id: "intro-hipaa-compliance",
@@ -239,6 +239,93 @@ const MATERIALS = [
     format: "html",
     access: "free",
     pageUrl: "guides/intro-cpma.html"
+  },
+  {
+    id: "healthcare-exams-overview",
+    title: "Healthcare Certification Exams Overview",
+    description: "A side-by-side look at every certification GetMedGuide covers — CPC, CCA, CBCS, COC, CIC, CCS, CRC, and CPMA — who administers each one, what it tests, and who it's for.",
+    category: "Certifications",
+    format: "html",
+    access: "free",
+    featured: true,
+    pageUrl: "guides/healthcare-exams-overview.html"
+  },
+  {
+    id: "cca-flashcards",
+    title: "CCA Exam Flashcards (110 Cards)",
+    description: "Flashcard-style review covering coding fundamentals, ICD-10-CM/PCS, CPT, HCPCS, health records, reimbursement, compliance, and terminology for the CCA exam. Printable PDF.",
+    category: "AHIMA Certifications",
+    format: "pdf",
+    access: "paid",
+    price: "$25",
+    pageUrl: "guides/cca-flashcards.html",
+    buyUrl: "https://payhip.com/b/REPLACE-ME-cca-flashcards"
+  },
+  {
+    id: "cbcs-flashcards",
+    title: "CBCS Exam Flashcards (120 Cards)",
+    description: "Flashcard-style review covering billing fundamentals, payer types, claims processing, ICD-10-CM/CPT/HCPCS basics, compliance, and revenue cycle for the CBCS exam. Printable PDF.",
+    category: "NHA Certifications",
+    format: "pdf",
+    access: "paid",
+    price: "$25",
+    pageUrl: "guides/cbcs-flashcards.html",
+    buyUrl: "https://payhip.com/b/REPLACE-ME-cbcs-flashcards"
+  },
+  {
+    id: "coc-flashcards",
+    title: "COC Exam Flashcards (120 Cards)",
+    description: "Flashcard-style review covering outpatient facility coding, APCs/OPPS, ASC and ED coding, modifiers, NCCI/OCE edits, and compliance for the COC exam. Printable PDF.",
+    category: "AAPC Certifications",
+    format: "pdf",
+    access: "paid",
+    price: "$25",
+    pageUrl: "guides/coc-flashcards.html",
+    buyUrl: "https://payhip.com/b/REPLACE-ME-coc-flashcards"
+  },
+  {
+    id: "cic-flashcards",
+    title: "CIC Exam Flashcards (123 Cards)",
+    description: "Flashcard-style review covering ICD-10-PCS, MS-DRGs, POA indicators, principal/secondary diagnosis selection, and inpatient compliance for the CIC exam. Printable PDF.",
+    category: "AAPC Certifications",
+    format: "pdf",
+    access: "paid",
+    price: "$25",
+    pageUrl: "guides/cic-flashcards.html",
+    buyUrl: "https://payhip.com/b/REPLACE-ME-cic-flashcards"
+  },
+  {
+    id: "ccs-flashcards",
+    title: "CCS Exam Flashcards (130 Cards)",
+    description: "Flashcard-style review covering advanced ICD-10-CM/PCS, facility CPT/HCPCS, DRG/APC reimbursement, pharmacology, anatomy, and data quality for the CCS exam. Printable PDF.",
+    category: "AHIMA Certifications",
+    format: "pdf",
+    access: "paid",
+    price: "$25",
+    pageUrl: "guides/ccs-flashcards.html",
+    buyUrl: "https://payhip.com/b/REPLACE-ME-ccs-flashcards"
+  },
+  {
+    id: "crc-flashcards",
+    title: "CRC Exam Flashcards (130 Cards)",
+    description: "Flashcard-style review covering HCCs, RAF scores, MEAT documentation, risk-adjusted ICD-10-CM specificity, and Medicare Advantage basics for the CRC exam. Printable PDF.",
+    category: "AAPC Certifications",
+    format: "pdf",
+    access: "paid",
+    price: "$25",
+    pageUrl: "guides/crc-flashcards.html",
+    buyUrl: "https://payhip.com/b/REPLACE-ME-crc-flashcards"
+  },
+  {
+    id: "cpma-flashcards",
+    title: "CPMA Exam Flashcards (130 Cards)",
+    description: "Flashcard-style review covering the audit cycle, sampling methods, E/M auditing, fraud/abuse red flags, and compliance regulations for the CPMA exam. Printable PDF.",
+    category: "AAPC Certifications",
+    format: "pdf",
+    access: "paid",
+    price: "$25",
+    pageUrl: "guides/cpma-flashcards.html",
+    buyUrl: "https://payhip.com/b/REPLACE-ME-cpma-flashcards"
   }
 
   /* --------------------------------------------------------------------
