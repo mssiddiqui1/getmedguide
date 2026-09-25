@@ -41,8 +41,7 @@
     </button>
     <nav class="site-nav" id="siteNav">
       <a href="index.html" data-menu="Home">Home</a>
-      <a href="guides.html" class="is-current" data-menu="Guides">Guides</a>
-      <a href="free-resources.html" data-menu="Free Resources">Free Resources</a>
+      <a href="guides.html" class="is-current" data-menu="Medical Guides">Medical Guides</a>
       <!-- <a href="videos.html" data-menu="Videos">Videos</a> -->
       <a href="free-images.html" data-menu="Free Images">Free Images</a>
       <a href="about.html" data-menu="About">About</a>
@@ -65,11 +64,16 @@
 
   <section class="catalog">
     <div class="container">
-      <div class="filter-bar" role="group" aria-label="Filter materials">
-        <button class="filter-btn is-active" data-filter="all" data-menu="Filter: All">All</button>
-        <button class="filter-btn" data-filter="free" data-menu="Filter: Free">Free</button>
-        <button class="filter-btn" data-filter="paid" data-menu="Filter: Paid">Paid</button>
-        <button class="filter-btn" data-filter="video" data-menu="Filter: Videos">Videos</button>
+      <div class="catalog-controls">
+        <div class="filter-bar" role="group" aria-label="Filter materials">
+          <button class="filter-btn is-active" data-filter="all" data-menu="Filter: All">All</button>
+          <button class="filter-btn" data-filter="free" data-menu="Filter: Free">Free</button>
+          <button class="filter-btn" data-filter="paid" data-menu="Filter: Paid">Paid</button>
+        </div>
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="materialsSearch" class="search-input" placeholder="Search guides…" aria-label="Search guides" data-menu="Search Guides">
+        </div>
       </div>
 
       <div class="materials-grid" id="materialsGrid">
@@ -127,8 +131,7 @@
       <div class="footer-col">
         <h4>Explore</h4>
         <ul>
-          <li><a href="guides.html" data-menu="Footer - Guides">All Guides</a></li>
-          <li><a href="free-resources.html" data-menu="Footer - Free Resources">Free Resources</a></li>
+          <li><a href="guides.html" data-menu="Footer - Medical Guides">All Medical Guides</a></li>
           <!-- <li><a href="videos.html" data-menu="Footer - Videos">Videos</a></li> -->
           <li><a href="free-images.html" data-menu="Footer - Free Images">Free Images</a></li>
         </ul>

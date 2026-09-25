@@ -302,12 +302,20 @@ section { padding: 60px 0; }
 .value-card h3 { font-size: 1rem; margin-bottom: 6px; }
 .value-card p { font-size: .9rem; margin: 0; }
 
-/* ---------- Filters ---------- */
+/* ---------- Filters + search ---------- */
+.catalog-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 28px;
+}
 .filter-bar {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 0;
 }
 .filter-btn {
   border: 1px solid var(--border);
@@ -327,6 +335,41 @@ section { padding: 60px 0; }
 }
 :root[data-theme="dark"] .filter-btn.is-active,
 :root[data-theme="dark"] .filter-btn:hover { background: var(--primary); border-color: var(--primary); }
+
+.search-bar {
+  position: relative;
+  flex: 0 1 280px;
+  min-width: 200px;
+}
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text);
+  padding: 8px 12px 8px 36px;
+  border-radius: var(--radius-sm);
+  font-size: .86rem;
+  font-family: inherit;
+}
+.search-input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+.search-input::-webkit-search-cancel-button { cursor: pointer; }
+@media (max-width: 640px) {
+  .catalog-controls { flex-direction: column; align-items: stretch; }
+  .search-bar { flex-basis: auto; }
+}
 
 /* ---------- Materials grid / cards ---------- */
 .materials-grid {
@@ -526,16 +569,32 @@ section { padding: 60px 0; }
 }
 .flashcard-face {
   position: relative;
-  padding: 34px 18px 16px;
+  padding: 14px 18px 16px;
   background: var(--card-bg);
   min-height: 108px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
 }
 .flashcard-face.back {
   border-top: 1px dashed var(--border);
+}
+/* Header row: category pill + "#N · Q/A" number, side by side in normal
+   flow (not absolutely positioned) so a long category name simply wraps
+   to a second line instead of overlapping the number — this is what
+   keeps every card readable regardless of how long its category label is. */
+.flashcard-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.flashcard-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .flashcard-term {
   color: var(--text);
@@ -545,9 +604,6 @@ section { padding: 60px 0; }
   margin: 0;
 }
 .flashcard-tag {
-  position: absolute;
-  top: 10px;
-  left: 14px;
   font-size: .62rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -557,13 +613,14 @@ section { padding: 60px 0; }
   padding: 3px 9px;
   border-radius: 10px;
   line-height: 1.4;
+  text-align: left;
 }
 .flashcard-num {
-  position: absolute;
-  top: 12px;
-  right: 14px;
+  flex-shrink: 0;
+  padding-top: 2px;
   font-size: .68rem;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 .flashcard-label {
   margin: 0 0 6px;

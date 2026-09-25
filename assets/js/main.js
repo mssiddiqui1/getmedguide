@@ -14,8 +14,15 @@
   var freeGrid = document.getElementById("freeGrid");         // free-resources.html — free items only
   var videosGrid = document.getElementById("videosGrid");     // videos.html
   var filterButtons = document.querySelectorAll(".filter-btn");
+  var searchInput = document.getElementById("materialsSearch"); // guides.html — search box
 
   /* ---------------- Card rendering helpers ---------------- */
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
   function badgeForAccess(item) {
     return item.access === "free"
       ? '<span class="badge badge-free">Free</span>'
@@ -32,8 +39,10 @@
   }
 
   function ctaForItem(item) {
-    // Every content page opens in a new tab so the catalog page stays open
-    // behind it (target="_blank" rel="noopener").
+    // On-site links (guide pages) open in the SAME window/tab — they're part
+    // of getmedguide.com, so there's no reason to fork a new tab for them.
+    // Only external links (Payhip checkout) open in a new tab, so the buyer
+    // never loses their place on the site mid-checkout.
     if (item.access === "free") {
       // Free items are on-site HTML guides now — "Read Guide", not "Download".
       return (
@@ -41,7 +50,7 @@
         item.pageUrl +
         '" data-menu="Read: ' +
         item.title +
-        '" target="_blank" rel="noopener">Read Guide</a>'
+        '">Read Guide</a>'
       );
     }
     // Paid items: an on-site HTML preview page (pageUrl) is the normal case.
@@ -52,13 +61,13 @@
         item.pageUrl +
         '" data-menu="Preview: ' +
         item.title +
-        '" target="_blank" rel="noopener">Preview</a>'
+        '">Preview</a>'
       : item.previewUrl
       ? '<a class="btn btn-outline btn-small" href="' +
         item.previewUrl +
         '" data-menu="Preview: ' +
         item.title +
-        '" target="_blank" rel="noopener">Preview</a>'
+        '">Preview</a>'
       : "";
     var buyBtn =
       '<a class="btn btn-primary btn-small" href="' +
@@ -108,7 +117,7 @@
     attachMenuTracking(container);
   }
 
-  /* ---------------- guides.html — full catalog with filters ---------------- */
+  /* ---------------- guides.html — full catalog with filters + search ---------------- */
   function applyFilter(filter) {
     if (filter === "all") return MATERIALS;
     if (filter === "free" || filter === "paid") {
@@ -117,15 +126,43 @@
     return MATERIALS.filter(function (m) { return m.format === filter; });
   }
 
+  // Matches the search box against title, description, and category — a
+  // simple case-insensitive substring match is plenty for a library this
+  // size (no need for a search library/index).
+  function matchesSearch(item, query) {
+    if (!query) return true;
+    var q = query.toLowerCase();
+    return (
+      (item.title || "").toLowerCase().indexOf(q) !== -1 ||
+      (item.description || "").toLowerCase().indexOf(q) !== -1 ||
+      (item.category || "").toLowerCase().indexOf(q) !== -1
+    );
+  }
+
+  var currentFilter = "all";
+
+  function updateCatalog() {
+    var query = searchInput ? searchInput.value.trim() : "";
+    var list = applyFilter(currentFilter).filter(function (m) { return matchesSearch(m, query); });
+    var emptyMessage = query
+      ? 'No guides match "' + escapeHtml(query) + '".'
+      : "No materials match this filter yet.";
+    renderInto(grid, list, emptyMessage);
+  }
+
   if (grid) {
     renderInto(grid, MATERIALS, "No materials yet — check back soon.");
     filterButtons.forEach(function (btn) {
       btn.addEventListener("click", function () {
         filterButtons.forEach(function (b) { b.classList.remove("is-active"); });
         btn.classList.add("is-active");
-        renderInto(grid, applyFilter(btn.getAttribute("data-filter")), "No materials match this filter yet.");
+        currentFilter = btn.getAttribute("data-filter");
+        updateCatalog();
       });
     });
+    if (searchInput) {
+      searchInput.addEventListener("input", updateCatalog);
+    }
   }
 
   /* ---------------- index.html — featured sample ----------------
