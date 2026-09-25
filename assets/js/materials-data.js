@@ -259,7 +259,7 @@ const MATERIALS = [
     access: "paid",
     price: "$25",
     pageUrl: "guides/cca-flashcards.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-cca-flashcards"
+    buyUrl: "https://payhip.com/b/RwDtg"
   },
   {
     id: "cbcs-flashcards",
@@ -270,7 +270,7 @@ const MATERIALS = [
     access: "paid",
     price: "$25",
     pageUrl: "guides/cbcs-flashcards.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-cbcs-flashcards"
+    buyUrl: "https://payhip.com/b/Fhv6q"
   },
   {
     id: "coc-flashcards",
@@ -281,7 +281,7 @@ const MATERIALS = [
     access: "paid",
     price: "$25",
     pageUrl: "guides/coc-flashcards.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-coc-flashcards"
+    buyUrl: "https://payhip.com/b/zgZoR"
   },
   {
     id: "cic-flashcards",
@@ -292,7 +292,7 @@ const MATERIALS = [
     access: "paid",
     price: "$25",
     pageUrl: "guides/cic-flashcards.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-cic-flashcards"
+    buyUrl: "https://payhip.com/b/VQvKh"
   },
   {
     id: "ccs-flashcards",
@@ -303,7 +303,7 @@ const MATERIALS = [
     access: "paid",
     price: "$25",
     pageUrl: "guides/ccs-flashcards.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-ccs-flashcards"
+    buyUrl: "https://payhip.com/b/BHDGi"
   },
   {
     id: "crc-flashcards",
@@ -314,7 +314,7 @@ const MATERIALS = [
     access: "paid",
     price: "$25",
     pageUrl: "guides/crc-flashcards.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-crc-flashcards"
+    buyUrl: "https://payhip.com/b/vePoI"
   },
   {
     id: "cpma-flashcards",
@@ -325,7 +325,7 @@ const MATERIALS = [
     access: "paid",
     price: "$25",
     pageUrl: "guides/cpma-flashcards.html",
-    buyUrl: "https://payhip.com/b/REPLACE-ME-cpma-flashcards"
+    buyUrl: "https://payhip.com/b/5hvL1"
   }
 
   /* --------------------------------------------------------------------
