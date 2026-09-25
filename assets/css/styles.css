@@ -673,6 +673,12 @@ section { padding: 60px 0; }
   object-fit: cover;
   background: var(--navy);
 }
+/* Square LinkedIn feed-post images (1200x1200) use their own aspect ratio —
+   forcing the wide 1584:396 banner crop onto them would hide the artwork. */
+.banner-item.is-square img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
 .banner-item-body { padding: 14px 16px 16px; }
 .banner-item-body h3 { margin: 0 0 2px; font-size: 1.05rem; }
 .banner-item-body p { margin: 0 0 12px; font-size: .85rem; color: var(--text-muted); }
