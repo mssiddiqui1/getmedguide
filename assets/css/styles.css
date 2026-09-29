@@ -487,6 +487,29 @@ section { padding: 60px 0; }
 .guide-header h1 { color: #fff; margin-bottom: 10px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
 .guide-header .guide-dek { color: rgba(255,255,255,.78); max-width: 680px; margin: 0; }
 
+.guide-audio {
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radius-sm);
+  max-width: 520px;
+}
+.guide-audio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.78);
+  margin-bottom: 8px;
+}
+.guide-audio audio { width: 100%; display: block; accent-color: var(--primary); }
+.guide-audio a { color: rgba(255,255,255,.85); }
+.guide-audio .guide-audio-fallback { font-size: .82rem; margin: 6px 0 0; color: rgba(255,255,255,.7); }
+
 .guide-body { padding: 48px 0 64px; }
 .guide-layout { display: grid; grid-template-columns: minmax(0, 720px); justify-content: center; gap: 40px; }
 
